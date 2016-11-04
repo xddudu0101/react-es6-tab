@@ -3,7 +3,7 @@
  */
 import React from 'react'
 import { render } from 'react-dom'
-import ProductDetailIntroduce from '../../public/components/ProductDetailIntroduce'
+import ProductDetailIntroduce from './ProductDetailIntroduce'
 import TabToogle from '../../public/components/TabToogle'
 export default  React.createClass({
     render(){
