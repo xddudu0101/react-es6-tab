@@ -1,0 +1,67 @@
+import React from 'react'
+import { render } from 'react-dom'
+import service from '../../common/service'
+import utils from '../../common/utils'
+import styles from '../css/productDetail.css'
+
+export default  React.createClass({
+    getInitialState:function(){
+       return{
+           detailCon:'',
+       }
+    },
+    componentDidMount:function(){
+        service.productDetailUrl({
+            //templateId:10,
+            templateId:utils.getUrlSharp("templateId"),
+        }, function(data){
+            if(data.resCode==0){
+                this.setState({
+                    detailCon:data.paramsMap,
+                });
+
+            }
+        }.bind(this));
+
+    },
+    render(){
+        let _this=this.state.detailCon;
+        return (
+            <ul className={styles.productWrap}>
+                <li>
+                    <div className={styles.productLeft}>
+                        产品名称
+                    </div>
+                    <div className={styles.productRight}>
+                        {_this.productName}
+                    </div>
+                </li>
+                <li>
+                    <div className={styles.productLeft}>
+                        产品介绍
+                    </div>
+                    <div className={styles.productRight}>
+                        {_this.productIntroduced}
+                    </div>
+                </li>
+                <li>
+                    <div className={styles.productLeft}>
+                        理财期限
+                    </div>
+                    <div className={styles.productRight}>
+                        {_this.financialPeriod}
+                    </div>
+                </li>
+                <li>
+                    <div className={styles.productLeft}>
+                        还款方式
+                    </div>
+                    <div className={styles.productRight}>
+                        {_this.repayMethod}
+                    </div>
+                </li>              
+
+            </ul>
+        )
+    }
+});
