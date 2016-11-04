@@ -1,0 +1,28 @@
+/**
+ * Created by ZhenDu on 2016/10/9.
+ */
+import React from 'react'
+import { render } from 'react-dom'
+import ProductDetail from '../../public/components/ProductDetailIntroduce'
+import TabToogle from '../../public/components/TabToogle'
+export default  React.createClass({
+    render(){
+        return (
+            <div>
+                <TabToogle>
+                    <div name="产品介绍">
+                        <ProductDetail />
+                    </div>
+                    <div name="邮费领取规则">
+                        邮费领取规则
+                        邮费领取规则
+                        邮费领取规则
+                        邮费领取规则
+
+                    </div>
+                </TabToogle>
+
+            </div>
+        );
+    }
+})
