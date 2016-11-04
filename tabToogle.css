@@ -1,0 +1,33 @@
+.Tab_tittle_wrap{
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+    border-bottom: 1px solid #cfcfcf;
+    font-size: 1.1em;
+}
+.Tab_item_wrap{
+    clear: both;
+}
+.tab_tittle{
+    display: block;
+    color:#2a2a2a;
+    float:left;
+    text-align: center;
+    padding-top: 0.8em;
+    padding-bottom: 0.8em;
+}
+.tit_active{
+    display: block;
+    color:#f65a0e;
+    float:left;
+    text-align: center;
+    padding-top: 0.8em;
+    padding-bottom: 0.8em;
+    border-bottom: 4px solid #f65a0e;
+}
+.tab_item{
+    display: none;
+}
+.tab_item.show{
+    display: block;
+}
